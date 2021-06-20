@@ -1,0 +1,6 @@
+ObjectRepositories\LoginPage_OR.class
+commonMethods\CommonFunctions.class
+Runner\TestRunner.class
+commonMethods\DriverSetup.class
+definition\Login.class
+commonMethods\BaseSuite.class

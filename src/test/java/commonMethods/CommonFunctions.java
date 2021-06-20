@@ -30,6 +30,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.*;
+
 import org.testng.TestException;
 import org.testng.asserts.SoftAssert;
 
@@ -72,7 +74,7 @@ public class CommonFunctions extends BaseSuite
 	
 	/* 2. */
 	
-	public void waitUntilElementIsDisplayedOnScreen(By selector) //2
+	public void waitUntilElementIsDisplayedOnScreen(By selector)  //2
 	{
 		try {
 			gWait = mFluentWait(driver);

@@ -19,14 +19,21 @@ public class BaseSuite {
 	public static String browsertype;
 
 	public void ApplicationDriverSetup(String browsertype) {
-		try {
+		try 
+		{
 			DriverSetup setup = DriverSetup.GetDriverInstance();
 			driver = setup.IntializeBrowserDriver(browsertype);
-		} catch (Exception e) {
+			pages = new ArrayList<Object>();
+			driver.get(url);
+			Thread.sleep(3000);
+		} 
+		catch (Exception e) 
+		{
 			e.printStackTrace();
 		}
 
-		finally {
+		finally 
+		{
 			System.out.println("Finally Block of " + Thread.currentThread().getStackTrace()[1].getMethodName());
 		}
 
