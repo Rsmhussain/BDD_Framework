@@ -14,8 +14,9 @@ public class BaseSuite {
 	/* GenericS Only consider the Objects*/
 	static List<Object> pages = new ArrayList<Object>();
 	
-	public static String url= "http://practice.automationtesting.in/my-account/";
-
+	//public static String url= "http://practice.automationtesting.in/my-account/";
+	
+	public static String url= "http://demo.automationtesting.in/Index.html";
 	public static String browsertype;
 
 	public void ApplicationDriverSetup(String browsertype) {
@@ -26,6 +27,7 @@ public class BaseSuite {
 			pages = new ArrayList<Object>();
 			driver.get(url);
 			Thread.sleep(3000);
+
 		} 
 		catch (Exception e) 
 		{

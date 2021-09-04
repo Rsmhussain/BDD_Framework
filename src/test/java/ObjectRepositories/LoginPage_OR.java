@@ -31,6 +31,14 @@ public class LoginPage_OR extends CommonFunctions
 	private final By Login_Id = ById.id("username");
 	private final By Login_Password = ById.id("password");
 	private final By Login_LoginBtn = ById.name("login");
+	private final By Login_regemail = ById.id("reg_email");
+	private final By Login_regpassword = ById.id("reg_password");
+	private final By Login_registerbtn = ById.name("register");
+	
+	
+	
+	
+	
 	
 	//Page Functionality Defining Methods
 	
@@ -61,6 +69,34 @@ public class LoginPage_OR extends CommonFunctions
 	public void clickLoginButton()
 	{
 		click(Login_LoginBtn);
+	}
+	
+	
+	public void enterRegisterDetails(String regemail,String regpassword)
+	{
+		try
+		{
+			Thread.sleep(300);
+			waitUntilElementIsDisplayedOnScreen(Login_regemail);
+			waitUntilElementIsDisplayedOnScreen(Login_regpassword);
+			sendKeys(Login_regemail,regemail);
+			sendKeys(Login_regpassword,regpassword);
+			Thread.sleep(600);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			System.out.println("Finally Block of " + Thread.currentThread().getStackTrace()[1].getMethodName());
+
+		}
+	}
+	
+	public void clickRegisterButton()
+	{
+		click(Login_registerbtn);
 	}
 	
 	

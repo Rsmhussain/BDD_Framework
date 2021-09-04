@@ -36,6 +36,9 @@ import org.testng.TestException;
 import org.testng.asserts.SoftAssert;
 
 import ObjectRepositories.LoginPage_OR;
+import ObjectRepositories.HomePage_OR;
+
+
 import commonMethods.BaseSuite;
 
 public class CommonFunctions extends BaseSuite
@@ -43,6 +46,7 @@ public class CommonFunctions extends BaseSuite
 {
 	/* Creating Object for the Page Object Repositories Class */
 	public static LoginPage_OR Login_Page;
+	public static HomePage_OR HomePage;
 //	public static CounterParty_OR Counterparty_Page; 
 	
 	

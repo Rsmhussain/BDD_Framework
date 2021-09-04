@@ -11,9 +11,10 @@ import org.testng.*;
 @CucumberOptions(
 		features="src\\test\\java\\features",
 		glue= "definition",
-		tags= {"@Login"},
+		tags= {"@Signin"},
 		dryRun=false,
 		strict=true)
+
 
 
 

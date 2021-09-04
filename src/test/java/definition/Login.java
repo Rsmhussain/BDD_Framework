@@ -33,17 +33,38 @@ public class Login extends CommonFunctions
 
     }
 
-    @When("^user enters the (.+) and (.+)$")
-    public void user_enters_the_and(String username, String password) throws Throwable 
+    @When("^user enters the valid user name (.+) and password (.+)$")
+    public void user_enters_the_valid_user_name_and_password(String username, String password) throws Throwable
     {
     	Login_Page.loginCredentials(username, password);
+    	System.out.println("Valid Login Executed");
     }
-
+    
+    @When("^user enters the Invalid user name (.+) and password (.+)$")
+    public void user_enters_the_invalid_user_name_and_password(String username, String password) throws Throwable
+    {
+    	Login_Page.loginCredentials(username, password);
+    	System.out.println("InValid Login Executed");
+    }
+    
     @Then("^click on login button$")
     public void click_on_login_button() throws Throwable 
     {
     	 Login_Page.clickLoginButton();
-         System.out.println("Login Executed");
+         System.out.println("Login Button Clicked");
     }
+    
+    @When("^user enters the rgister username (.+) and password (.+)$")
+    public void user_enters_the_rgister_username_and_password(String regemail, String regpassword) throws Throwable 
+    {
+    	Login_Page.enterRegisterDetails(regemail, regpassword);
+    	System.out.println("Register Block Executed");
+    }
+
+    @Then("^click on Register button$")
+    public void click_on_register_button() throws Throwable {
+    	Login_Page.clickRegisterButton();
+    }
+
 
 }
